@@ -6,6 +6,8 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
+import com.ivanmoreno.restaurant.common.DuplicateRestaurantException;
+import com.ivanmoreno.restaurant.common.InvalidRestaurantException;
 import com.ivanmoreno.restaurant.domain.model.entity.Entity;
 import com.ivanmoreno.restaurant.domain.model.entity.Restaurant;
 import com.ivanmoreno.restaurant.domain.repository.RestaurantRepository;
@@ -24,11 +26,13 @@ public class RestaurantServiceImpl extends BaseService<Restaurant, String> imple
 	@Override
 	public void add(Restaurant restaurant) throws Exception{
 		if(restaurant.getName() == null || restaurant.getName().equals("")) {
-			throw new Exception("Restaurant with null or empty name");
+			Object[] args = {"Restaurant with null or empty name"};
+			throw new InvalidRestaurantException("invalidRestaurant", args);
 		}
 		
 		if(restaurantRepo.containsName(restaurant.getName())) {
-			throw new Exception("Duplicate Restaurant Name");
+			Object[] args = {restaurant.getName()};
+			throw new DuplicateRestaurantException("duplicateRestaurant", args);
 		}
 		
 		super.add(restaurant);

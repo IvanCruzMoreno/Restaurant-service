@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
 
+import com.ivanmoreno.restaurant.common.RestaurantNotFoundException;
 import com.ivanmoreno.restaurant.domain.model.entity.Restaurant;
 
 @Repository("restaurantRepository")
@@ -95,7 +96,8 @@ public class InMemRestaurantRepository implements RestaurantRepository<Restauran
 		.collect(Collectors.toList());
 		
 		if(restaurants != null && restaurants.isEmpty()) {
-			throw new Exception("Something bad happend :(");
+			Object[] args = {name};
+			throw new RestaurantNotFoundException("restaurantNotFound", args);
 		}
 		
 		return restaurants;
