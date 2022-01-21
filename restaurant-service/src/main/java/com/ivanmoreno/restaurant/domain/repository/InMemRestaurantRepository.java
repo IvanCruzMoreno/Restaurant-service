@@ -91,7 +91,7 @@ public class InMemRestaurantRepository implements RestaurantRepository<Restauran
 	public Collection<Restaurant> findByName(String name) throws Exception {
 		
 		List<Restaurant> restaurants = entities.entrySet().stream()
-		.filter(entry -> entry.getValue().getName().contains(name))
+		.filter(entry -> entry.getValue().getName().toLowerCase().contains(name))
 		.map(entry -> entry.getValue())
 		.collect(Collectors.toList());
 		
