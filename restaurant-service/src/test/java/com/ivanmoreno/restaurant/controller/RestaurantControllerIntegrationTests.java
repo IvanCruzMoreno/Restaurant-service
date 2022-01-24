@@ -10,6 +10,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import com.ivanmoreno.restaurant.domain.model.entity.Table;
 
@@ -45,5 +50,17 @@ class RestaurantControllerIntegrationTests extends AbstractRestaurantControllerT
 	    assertNull(tableList);
 		
 	}
+	
+	@Test
+	  public void testGetById_NoContent() {
+
+	    ResponseEntity<Map> responseE = 
+	    		restTemplate.getForEntity("http://localhost:" + port + "/v1/restaurants/99", Map.class);
+
+	    assertNotNull(responseE);
+
+	    // Should return no content as there is no restaurant with id 99
+	    assertEquals(HttpStatus.NO_CONTENT, responseE.getStatusCode());
+	  }
 
 }
