@@ -3,6 +3,7 @@ package com.ivanmoreno.restaurant.domain.model.entity;
 import java.math.BigInteger;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ivanmoreno.commons.domain.model.entity.BaseEntity;
 
 import lombok.Data;
 import lombok.ToString;

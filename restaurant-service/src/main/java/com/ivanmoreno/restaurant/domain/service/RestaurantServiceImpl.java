@@ -6,9 +6,9 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
+import com.ivanmoreno.commons.domain.model.entity.Entity;
 import com.ivanmoreno.restaurant.common.DuplicateRestaurantException;
 import com.ivanmoreno.restaurant.common.InvalidRestaurantException;
-import com.ivanmoreno.restaurant.domain.model.entity.Entity;
 import com.ivanmoreno.restaurant.domain.model.entity.Restaurant;
 import com.ivanmoreno.restaurant.domain.repository.RestaurantRepository;
 

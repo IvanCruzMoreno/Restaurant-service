@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ivanmoreno.commons.domain.model.entity.Entity;
 import com.ivanmoreno.restaurant.common.DuplicateRestaurantException;
 import com.ivanmoreno.restaurant.common.InvalidRestaurantException;
 import com.ivanmoreno.restaurant.common.RestaurantNotFoundException;
-import com.ivanmoreno.restaurant.domain.model.entity.Entity;
 import com.ivanmoreno.restaurant.domain.model.entity.Restaurant;
 import com.ivanmoreno.restaurant.domain.service.RestaurantService;
 import com.ivanmoreno.restaurant.domain.valueobject.RestaurantVO;

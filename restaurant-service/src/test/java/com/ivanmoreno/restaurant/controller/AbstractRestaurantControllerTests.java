@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.ivanmoreno.restaurant.domain.model.entity.Entity;
+import com.ivanmoreno.commons.domain.model.entity.Entity;
 import com.ivanmoreno.restaurant.domain.model.entity.Restaurant;
 import com.ivanmoreno.restaurant.domain.valueobject.RestaurantVO;
 

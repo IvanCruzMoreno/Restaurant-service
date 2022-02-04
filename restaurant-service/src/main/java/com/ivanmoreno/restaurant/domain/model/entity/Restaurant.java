@@ -3,6 +3,8 @@ package com.ivanmoreno.restaurant.domain.model.entity;
 import java.util.List;
 import java.util.Optional;
 
+import com.ivanmoreno.commons.domain.model.entity.BaseEntity;
+
 import lombok.Data;
 import lombok.ToString;
 

@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import com.ivanmoreno.restaurant.domain.model.entity.Entity;
+import com.ivanmoreno.commons.domain.model.entity.Entity;
 import com.ivanmoreno.restaurant.domain.model.entity.Restaurant;
 
 public interface RestaurantService {
