@@ -2,7 +2,7 @@ package com.ivanmoreno.restaurant.domain.service;
 
 import java.util.Collection;
 
-import com.ivanmoreno.restaurant.domain.repository.Repository;
+import com.ivanmoreno.commons.domain.repository.Repository;
 
 public abstract class BaseService<TE, T> extends ReadOnlyBaseService<TE, T>{
 

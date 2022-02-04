@@ -1,6 +1,6 @@
 package com.ivanmoreno.restaurant.domain.service;
 
-import com.ivanmoreno.restaurant.domain.repository.ReadOnlyRepository;
+import com.ivanmoreno.commons.domain.repository.ReadOnlyRepository;
 
 public abstract class ReadOnlyBaseService<TE, T> {
 
